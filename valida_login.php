@@ -17,9 +17,9 @@ if((isset($_POST['email'])) && (isset($_POST['senha']))){
         $_SESSION['nivel'] = $resultado['nivel'];
 
         if($_SESSION['nivel'] == "usuario"){
-            header("Location: adiciona-filme.php");
+            header("Location: meus-filmes.php");
         }elseif($_SESSION['nivel'] == "adm"){
-            header("Location: administrador.php");
+            header("Location: adiciona-filme.php");
         }
     }else{    
         //Váriavel global recebendo a mensagem de erro
