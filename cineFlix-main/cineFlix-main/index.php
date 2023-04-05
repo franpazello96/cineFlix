@@ -96,7 +96,36 @@
                         </div>
                       </div>
                     </div>
+                    <div class="col-md-6">
+                        <br><h2>Cineflix</h2><br>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                        <h3>Nome do filme</h3>
+                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
+                
 
+[]
+                    </div>
                 </div>
             </div>
         </section>
