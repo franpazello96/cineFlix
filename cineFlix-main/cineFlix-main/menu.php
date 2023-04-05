@@ -39,20 +39,21 @@
                             <li  id='entrar' class="nav-item" style="display: flex; align-items: center;">
                                 <a href="login.php" class="nav-link">ENTRAR</a>
                             </li> 
-                            <!-- <div class="dropdown">
+                            <div class="dropdown">
                                 <button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    SEARCH
+                                    BUSCAR
                                 </button>
                             <div id="search" style="background-color: darkred">
                                 <input id='movieTitle' style="border:0; outline:0" placeholder="Pesquise por título"/>
                                 <select style="margin-left: 10px" aria-label="Pesquise por genero">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option selected>Pesquise por gênero </option>
+                                    <option value="1">Comédia</option>
+                                    <option value="2">Terror</option>
+                                    <option value="3">Ação</option>
+                                    <option value="3">Suspense</option>
                                 </select>
                             </div>
-                            </div> -->
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -65,17 +66,16 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const logged = urlParams.get('logged');
-console.log(logged, 'ghjbv');
 if ( logged ) {
     document.getElementById("entrar").innerHTML = '<a class="nav-link">LOGADO</a><img src="imagens/perfil.png"  style="background-color:black;" witdh="5px" height="25px" class="imagem">';
 }
 
 function myFunction() {
   var search = document.getElementById("search");
-  if (search.style.display === "none") {
-    search.style.display = "flex";
-  } else {
+  if (search.style.display === "flex") {
     search.style.display = "none";
+  } else {
+    search.style.display = "flex";
   }
 
 }
