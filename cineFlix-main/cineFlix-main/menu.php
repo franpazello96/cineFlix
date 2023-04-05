@@ -18,7 +18,11 @@
                             <li  class="nav-item">
                                 <a href="index.php" class="nav-link">HOME</a>
                             </li>
-  
+
+                            <li>
+                                <a href="adiciona-filme.php" class="nav-link">CADASTRAR FILME</a>
+                            </li>
+                            
                             <li  class="nav-item">
                                 <a href="doar.php" class="nav-link">CATEGORIAS</a>
                             </li>
@@ -26,6 +30,7 @@
                                 <a href="contato.php" class="nav-link">FAQ</a>
                             </li>
                             <li  class="nav-item divisor"></li>
+                            
                            <!-- <li  class="nav-item">
                                 <a href="login-cadastro.php" class="nav-link">INSCREVER-SE</a>
                             </li>-->
