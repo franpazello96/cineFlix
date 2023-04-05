@@ -32,13 +32,13 @@
                             </li>
                             <li  class="nav-item divisor"></li>
                             
-                           <!-- <li  class="nav-item">
+                           <li  class="nav-item">
                            <li  class="nav-item">
                                 <a href="login-cadastro.php" class="nav-link">INSCREVER-SE</a>
                             </li>
                             <li  id='entrar' class="nav-item" style="display: flex; align-items: center;">
                                 <a href="login.php" class="nav-link">ENTRAR</a>
-                            </li>
+                            </li> 
                             <!-- <div class="dropdown">
                                 <button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     SEARCH
