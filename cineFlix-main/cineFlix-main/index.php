@@ -24,108 +24,60 @@
                     <div class="col-md-6">
                       <div class="row albuns">
                         <div class="col-md-6">
-                            <img src="imagens/imagem1.png" width="350" height="350" class="img-fluid d-none d-md-block">
+                        <h3>Nome do filme</h3>
+                            <img src="imagens/imagem2.png" class="img-fluid d-none d-md-block">
+                            <p style="color: white;">Descrição do filme.<strong style="color: darkred;">Assistir</strong></p>
                         </div>
                         <div class="col-md-6">
-                            <img src="imagens/imagem2.png" width="350" height="350" class="img-fluid d-none d-md-block">
+                        <h3>Nome do filme</h3>
+                            <img src="imagens/imagem2.png" class="img-fluid d-none d-md-block">
+                            <p style="color: white;">Descrição do filme.<strong style="color: darkred;">Assistir</strong></p>
                         </div>
                       </div>
                       <div class="row albuns">
                         <div class="col-md-6">
-                            <img src="imagens/imagem3.png" width="350" height="350" class="img-fluid d-none d-md-block" >
+                        <h3>Nome do filme</h3>
+                            <img src="imagens/imagem2.png" class="img-fluid d-none d-md-block" >
+                            <p style="color: white;">Descrição do filme.<strong style="color: darkred;">Assistir</strong></p>
                         </div>
                         <div class="col-md-6">
-                            <img src="imagens/imagem4.png" width="350" height="350" class="img-fluid d-none d-md-block">
+                        <h3>Nome do filme</h3>
+                            <img src="imagens/imagem2.png"  class="img-fluid d-none d-md-block">
+                            <p style="color: white;">Descrição do filme.<strong style="color: darkred;">Assistir</strong></p>
                         </div>
                       </div>
                     </div>
 
-                    <div class="col-md-6">
-                      <div class="row albuns">
-                        <div class="col-md-6">
-                            <img src="imagens/imagem1.png" width="350" height="350" class="img-fluid d-none d-md-block">
-                        </div>
-                        <div class="col-md-6">
-                            <img src="imagens/imagem2.png" width="350" height="350" class="img-fluid d-none d-md-block">
-                        </div>
-                      </div>
-                      <div class="row albuns">
-                        <div class="col-md-6">
-                            <img src="imagens/imagem3.png" width="350" height="350" class="img-fluid d-none d-md-block" >
-                        </div>
-                        <div class="col-md-6">
-                            <img src="imagens/imagem4.png" width="350" height="350" class="img-fluid d-none d-md-block">
-                        </div>
-                      </div>
-                    </div>
 
                     <div class="col-md-6">
                       <div class="row albuns">
                         <div class="col-md-6">
-                            <img src="imagens/imagem1.png" width="350" height="350" class="img-fluid d-none d-md-block">
+                        <h3>Nome do filme</h3>
+                            <img src="imagens/imagem2.png" class="img-fluid d-none d-md-block">
+                            <p style="color: white;">Descrição do filme.<strong style="color: darkred;">Assistir</strong></p>
                         </div>
                         <div class="col-md-6">
-                            <img src="imagens/imagem2.png" width="350" height="350" class="img-fluid d-none d-md-block">
+                        <h3>Nome do filme</h3>
+                            <img src="imagens/imagem2.png" class="img-fluid d-none d-md-block">
+                            <p style="color: white;">Descrição do filme.<strong style="color: darkred;">Assistir</strong></p>
                         </div>
                       </div>
                       <div class="row albuns">
                         <div class="col-md-6">
-                            <img src="imagens/imagem3.png" width="350" height="350" class="img-fluid d-none d-md-block" >
+                        <h3>Nome do filme</h3>
+                            <img src="imagens/imagem2.png" class="img-fluid d-none d-md-block" >
+                            <p style="color: white;">Descrição do filme.<strong style="color: darkred;">Assistir</strong></p>
                         </div>
                         <div class="col-md-6">
-                            <img src="imagens/imagem4.png" width="350" height="350" class="img-fluid d-none d-md-block">
+                        <h3>Nome do filme</h3>
+                            <img src="imagens/imagem2.png"  class="img-fluid d-none d-md-block">
+                            <p style="color: white;">Descrição do filme.<strong style="color: darkred;">Assistir</strong></p>
                         </div>
                       </div>
                     </div>
 
-                    <div class="col-md-6">
-                      <div class="row albuns">
-                        <div class="col-md-6">
-                            <img src="imagens/imagem1.png" width="350" height="350" class="img-fluid d-none d-md-block">
-                        </div>
-                        <div class="col-md-6">
-                            <img src="imagens/imagem2.png" width="350" height="350" class="img-fluid d-none d-md-block">
-                        </div>
-                      </div>
-                      <div class="row albuns">
-                        <div class="col-md-6">
-                            <img src="imagens/imagem3.png" width="350" height="350" class="img-fluid d-none d-md-block" >
-                        </div>
-                        <div class="col-md-6">
-                            <img src="imagens/imagem4.png" width="350" height="350" class="img-fluid d-none d-md-block">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                        <br><h2>Cineflix</h2><br>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                        <h3>Nome do filme</h3>
-                        <p>Descrição do filme.<strong style="color: darkcyan;">Assistir?</strong></p>
-                
 
-[]
-                    </div>
+
                 </div>
             </div>
         </section>
