@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-md-12">
                 <img src="imagens/perfil.png"  witdh="15%" height="15%" class="imagem mt-5"> 
-                         <form action="valida_login.php" method="POST" name="valida_login" id="login_valida">
+                         <form onsubmit="return false" action="login_valida.php" method="POST" name="login_valida" id="login_valida">
                             <div class="form-group m-3">
                                 <input type="email" class="form-control" id="email" name="email" placeholder="E-mail:" required>
                             </div>
@@ -20,11 +20,27 @@
                                 <p ><a href="" style="font-size: 12px;">Esqueceu sua senha?</a><p>
                             </div>
                             <div>
-                            <a href="index.php" class="btn btn-secondary">Voltar</a>	
-                            <button type="submit" class="btn btn-primary " >Entrar</button>
+                                <a href="index.php" class="btn btn-secondary">Voltar</a>	
+                                <button id="logar" class="btn btn-primary" >Entrar</button>
                             </div>
                         </form>
         </section>
 
 </body>
 </html>
+
+<script type="module">
+    import { logIn } from './script/firebase/firebaseAuth.js';
+
+    const logar = document.getElementById("logar");
+    logar.addEventListener("click", async event => {
+        console.log('runing login');
+        const email = document.getElementById("email");
+        const senha = document.getElementById("senha");
+        const logged = await logIn(email.value, senha.value)
+        console.log(logged);
+        if (logged) {
+            window.location.replace('index.php?logged=' + true)
+        }
+    });
+</script>

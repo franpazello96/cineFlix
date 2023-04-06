@@ -11,7 +11,7 @@
                         <h1 >Filmes, séries e muito mais. Sem limites.</h1>
                         <h6 >Assista onde quiser. </h6>
                         <a href="login-cadastro.php" class="btn  btn-azul btn-lg btn-custom">Criar Assinatura.</a>
-                        <a href="parceiros.php" class="btn  btn-branco btn-lg btn-custom">NOSSOS FILMES </a>		
+                        <a href="#" class="btn  btn-branco btn-lg btn-custom">NOSSOS FILMES </a>		
                     </div>
                 </div>
             </div>
