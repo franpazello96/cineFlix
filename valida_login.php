@@ -4,7 +4,7 @@ session_start();
 require_once 'conexao.php';
 
 if((isset($_POST['email'])) && (isset($_POST['senha']))){
-    $email = mysqli_real_escape_string($conn, $_POST['email']); //Escapar de caracteres especiais, como aspas, prevenindo SQL injection
+    $email = mysqli_real_escape_string($conn, $_POST['email']); 
     $senha = mysqli_real_escape_string($conn, $_POST['senha']);
     $senha = md5($senha); 
     $result_usuario = "SELECT * FROM usuario WHERE email = '$email' && senha = '$senha' LIMIT 1";
@@ -21,19 +21,5 @@ if((isset($_POST['email'])) && (isset($_POST['senha']))){
         }elseif($_SESSION['nivel'] == "adm"){
             header("Location: adiciona-filme.php");
         }
-    }else{    
-        //Váriavel global recebendo a mensagem de erro
-        // echo "Usuário ou senha Inválido";
-        // header("location: login.php");
-        ?>
-<script>
-    alert('Erro'); 
-    location.href='login.php';
-</script>
-        <?php	
     }
-}else{
-    echo  "Usuário ou senha inválido";
-    header("location: login.php");
-}
 ?>

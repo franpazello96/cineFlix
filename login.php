@@ -29,18 +29,4 @@
 </body>
 </html>
 
-<script type="module">
-    import { logIn } from './script/firebase/firebaseAuth.js';
 
-    const logar = document.getElementById("logar");
-    logar.addEventListener("click", async event => {
-        console.log('runing login');
-        const email = document.getElementById("email");
-        const senha = document.getElementById("senha");
-        const logged = await logIn(email.value, senha.value)
-        console.log(logged);
-        if (logged) {
-            window.location.replace('index.php?logged=' + true)
-        }
-    });
-</script>
