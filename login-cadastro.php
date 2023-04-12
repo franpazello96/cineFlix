@@ -21,13 +21,12 @@
                                     <option id="pessoa_juridica" value="pessoa_juridica" name="pessoa_juridica">Pessoa Juridica</option>
                                 </select>
                                     <input class="form-control m-2 col-12" type="text" id="nome" name="nome" placeholder="Nome: " >
-                                    <input class="form-control m-2 col-12" type="text" id="razao" name="razao" placeholder="Razão Social: " >
-                                    <input class="form-control m-2 col-12" type="text" id="fantasia" name="fantasia" placeholder="Nome Fantasia: " >
+            
+                            
                                     <input class="form-control m-2 col-12" type="email"id="email" name="email" placeholder="E-mail:  " >
                                     <input class="form-control m-2 col-12" type="password"id="senha" name="senha" placeholder="Senha:  " >
                                     <input class="form-control m-2 col-12" type="text" id="cpf" name="cpf" placeholder="CPF: " >
                                     <input class="form-control m-2 col-12" type="text" id="dataDeNascimento" name="dataDeNascimento" placeholder="Data de Nascimento: " >
-                                    <input class="form-control m-2 col-12" type="text" id="cnpj" name="cnpj" placeholder="CNPJ: " >
                                     <input class="form-control m-2 col-12" type="text" id="cep" name="cep" placeholder="CEP: " >
                                     <input class="form-control m-2 col-12" type="text" id="logradouro" name="logradouro" placeholder="Logradouro: " >
                                     <input class="form-control m-2 col-12" type="text" id="numero" name="numero" placeholder="Número: " >
