@@ -24,33 +24,24 @@
                                     <input class="form-control m-2 col-12" type="text" id="razao" name="razao" placeholder="Razão Social: " >
                                     <input class="form-control m-2 col-12" type="text" id="fantasia" name="fantasia" placeholder="Nome Fantasia: " >
                                     <input class="form-control m-2 col-12" type="text" id="cnpj" name="cnpj" placeholder="CNPJ: " >
-                                    <input class="form-control m-2 col-12" type="email"id="email" name="email" placeholder="E-mail:  " >
-                                    <input class="form-control m-2 col-12" type="password"id="senha" name="senha" placeholder="Senha:  " >
-                                    <input class="form-control m-2 col-12" type="text" id="logradouro" name="logradouro" placeholder="Logradouro: " >
-                                    <input class="form-control m-2 col-12" type="text" id="numero" name="numero" placeholder="Número: " >
-                                    <input class="form-control m-2 col-12" type="text" id="complemento" name="complemento" placeholder="Complemento: " >
-                                    <input class="form-control m-2 col-12" type="text" id="bairro" name="bairro" placeholder="Bairro: " >
-                                    <input class="form-control m-2 col-12" type="text" id="cidade" name="cidade" placeholder="Cidade: " >
-                                    <input class="form-control m-2 col-12" type="text" id="uf" name="uf" placeholder="Estado: " >
-                                    <input class="form-control m-2 col-12" type="text" id="telefone" name="telefone" placeholder="Telefone: ">
                                 </div>
                                 <div id="pessoa_fisica_campos">
                                     <input class="form-control m-2 col-12" type="text" id="nome" name="nome" placeholder="Nome: " >
                                     <input class="form-control m-2 col-12" type="text" id="cpf" name="cpf" placeholder="CPF: " >
-                                    <input class="form-control m-2 col-12" type="email"id="email" name="email" placeholder="E-mail:  " >
-                                    <input class="form-control m-2 col-12" type="password"id="senha" name="senha" placeholder="Senha:  " >
                                     <input class="form-control m-2 col-12" type="text" id="dataDeNascimento" name="dataDeNascimento" placeholder="Data de Nascimento: " >
-                                    <input class="form-control m-2 col-12" type="text" id="cep" name="cep" placeholder="CEP: " >
-                                    <input class="form-control m-2 col-12" type="text" id="logradouro" name="logradouro" placeholder="Logradouro: " >
-                                    <input class="form-control m-2 col-12" type="text" id="numero" name="numero" placeholder="Número: " >
-                                    <input class="form-control m-2 col-12" type="text" id="complemento" name="complemento" placeholder="Complemento: " >
-                                    <input class="form-control m-2 col-12" type="text" id="bairro" name="bairro" placeholder="Bairro: " >
-                                    <input class="form-control m-2 col-12" type="text" id="cidade" name="cidade" placeholder="Cidade: " >
-                                    <input class="form-control m-2 col-12" type="text" id="uf" name="uf" placeholder="Estado: " >
-                                    <input class="form-control m-2 col-12" type="text" id="telefone" name="telefone" placeholder="Telefone: ">
-                                </div>       
-                                    <a href="index.php" class="btn btn-secondary ml-2">Voltar</a>	
-                                    <button  type="submit" class="btn btn-primary ">Cadastrar</button>
+                                </div>    
+                                <input class="form-control m-2 col-12" type="email"id="email" name="email" placeholder="E-mail:  " >
+                                <input class="form-control m-2 col-12" type="password"id="senha" name="senha" placeholder="Senha:  " >   
+                                <input class="form-control m-2 col-12" type="text" id="cep" name="cep" placeholder="CEP: " >
+                                <input class="form-control m-2 col-12" type="text" id="logradouro" name="logradouro" placeholder="Logradouro: " >
+                                <input class="form-control m-2 col-12" type="text" id="numero" name="numero" placeholder="Número: " >
+                                <input class="form-control m-2 col-12" type="text" id="complemento" name="complemento" placeholder="Complemento: " >
+                                <input class="form-control m-2 col-12" type="text" id="bairro" name="bairro" placeholder="Bairro: " >
+                                <input class="form-control m-2 col-12" type="text" id="cidade" name="cidade" placeholder="Cidade: " >
+                                <input class="form-control m-2 col-12" type="text" id="uf" name="uf" placeholder="Estado: " >
+                                <input class="form-control m-2 col-12" type="text" id="telefone" name="telefone" placeholder="Telefone: ">
+                                <a href="index.php" class="btn btn-secondary ml-2">Voltar</a>	
+                                <button  type="submit" class="btn btn-primary ">Cadastrar</button>
                             </div>
                         </form>
                     </div>
