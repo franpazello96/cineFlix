@@ -15,11 +15,6 @@
                             <h2 class="mt-5 ml-2" style="font-size: 40px;" >Cadastre-se</h2>
                             <form method="POST" action="login-cadastro_grava.php" name="login-cadastro_grava" id="login-cadastro_grava">
                             <div class="form-group">
-                                <select class="form-control  m-2 col-12" id="tipo_pessoa" name="tipo_pessoa" onchange="exibir_ocultar(this)">
-                                    <option id="selecione" value="selecione" name="selecione">Selecione</option>
-                                    <option id="pessoa_fisica" value="pessoa_fisica" name="pessoa_fisica">Pessoa Fisica</option>
-                                    <option id="pessoa_juridica" value="pessoa_juridica" name="pessoa_juridica">Pessoa Juridica</option>
-                                </select>
                                     <input class="form-control m-2 col-12" type="text" id="nome" name="nome" placeholder="Nome: " >
             
                             
@@ -43,7 +38,7 @@
                 </div>
                 <div class="col-md-6" style="margin-top: 100px;">
                     <div class="col-md-12 m-3">
-                    <img id="img" src="imagens/iphone3.png"  width="100%" height="70%">                           
+                    <img id="img" src="imagens/logo_red.png"  width="100%" height="70%">                           
                     </div>
                 </div>
 
