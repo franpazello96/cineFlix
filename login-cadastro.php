@@ -16,8 +16,6 @@
                             <form method="POST" action="login-cadastro_grava.php" name="login-cadastro_grava" id="login-cadastro_grava">
                             <div class="form-group">
                                     <input class="form-control m-2 col-12" type="text" id="nome" name="nome" placeholder="Nome: " >
-            
-                            
                                     <input class="form-control m-2 col-12" type="email"id="email" name="email" placeholder="E-mail:  " >
                                     <input class="form-control m-2 col-12" type="password"id="senha" name="senha" placeholder="Senha:  " >
                                     <input class="form-control m-2 col-12" type="text" id="cpf" name="cpf" placeholder="CPF: " >
