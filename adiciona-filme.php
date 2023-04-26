@@ -30,7 +30,7 @@
             </div>
             <div class="form-group m-3">
                 <label for="ano">Ano</label>
-                <input type="number" id="ano" class="form-control"  placeholder="Ano">
+                <input type="number" id="ano" class="form-control"  placeholder="Ano" required>
             </div>
             <div class="form-group m-3">
                 <label for="duracao">Duração (Horas)</label>
@@ -38,7 +38,7 @@
             </div>
             <div style="padding-bottom: 5%; padding-left: 40%">
                 <a href="index.php" class="btn btn-secondary">Cancelar</a>	
-                <button type="submit" class="btn btn-primary ">Cadastrar</button>
+                <button type="submit" onclick="validaAno()" class="btn btn-primary ">Cadastrar</button>
             </div>
         </form>
         </div>
@@ -46,4 +46,16 @@
     </div>
     <?php require_once 'rodape.php'?>
 </body>
+<script>
+    function validaAno(){
+        const anoAtual = new Date().getFullYear();
+        const ano = document.getElementById("ano").value;
+
+        if(ano < 1900 || ano > anoAtual){
+            document.getElementById("ano").value = null;
+            alert("Ano invalido");
+        }
+
+    }
+</script>
 </html>
