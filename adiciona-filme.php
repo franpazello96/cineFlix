@@ -5,6 +5,8 @@
     <?php require_once 'link.php';?>
     <?php require_once 'menu.php';?>
     <link rel="stylesheet" href="css/layout.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 </head>
 
 <body>
@@ -30,11 +32,11 @@
             </div>
             <div class="form-group m-3">
                 <label for="ano">Ano</label>
-                <input type="number" id="ano" class="form-control" name="ano" placeholder="Ano" required>
+                <input type="text" id="ano" class="form-control" name="ano" placeholder="Ano" pattern="\d*" maxlength="4" required>
             </div>
             <div class="form-group m-3">
-                <label for="duracao">Duração (Horas)</label>
-                <input type="number" id="duracao" class="form-control" name="duracao" placeholder="Duração" required>
+                <label for="duracao">Duração (horas : minutos)</label>
+                <input type="text" id="duracao" class="form-control" name="duracao" placeholder="Duração" required>
             </div>
             <div style="padding-bottom: 5%; padding-left: 40%">
                 <a href="index.php" class="btn btn-secondary">Cancelar</a>	
@@ -57,5 +59,6 @@
         }
 
     }
+    $("#duracao").mask("00:00");
 </script>
 </html>
