@@ -10,7 +10,7 @@ $ano = $_POST['ano'];
 $duracao = $_POST['duracao'];
 
 $sql = "INSERT INTO filme (titulo, descricao, genero, diretor, ano, duracao)
-VALUES ('$titulo','$descricao', '$genero', '$diretor', $ano, '$duracao')";
+VALUES ('$titulo','$descricao', '$genero', '$diretor', $ano, $duracao)";
 
 $resultado = mysqli_query($conn,$sql);
 
