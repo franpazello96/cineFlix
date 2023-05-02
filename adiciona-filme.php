@@ -14,6 +14,12 @@
 
 </head>
 
+<style>
+    input[type="file"] {
+        display: none;
+    }
+</style>
+
 <body>
     <div class="content">
         <div class="container aling-self-center">
@@ -66,8 +72,9 @@
                         <input type="number" id="duracao" class="form-control" name="duracao" placeholder="Duração" required>
                     </div>
                     <div class="form-group m-3">
-                        <label for="imagem">Imagem</label>
-                        <input type="file" id="imagem" class="full-width" name="imagem" placeholder="Imagem" title="A imagem da produção precisa ser inserida em formato JPG ou PNG" required>
+                        <label>Imagem</label>
+                        <label for="imagem" class="form-control">Imagem</label>
+                        <input type="file" id="imagem" class="form-control" name="imagem" placeholder="Imagem" required>
                     </div>
                     <div style="padding-bottom: 5%; padding-left: 40%">
                         <a href="index.php" class="btn btn-secondary">Cancelar</a>
