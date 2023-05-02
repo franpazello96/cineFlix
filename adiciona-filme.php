@@ -18,7 +18,7 @@
     <div class="content">
         <div class="container aling-self-center">
             <div style="padding-top: 15%;">
-                <form method="POST" action="adiciona-filme-grava.php" name="adiciona-filme-grava" id="adiciona-filme-grava" class="col-md-12" style="background-color: #dbdbdb; border-radius: 30px;">
+                <form method="POST" enctype="multipart/form-data" action="adiciona-filme-grava.php" name="adiciona-filme-grava" id="adiciona-filme-grava" class="col-md-12" style="background-color: #dbdbdb; border-radius: 30px;">
                     <div class="form-group m-3" style="padding-top: 5%;">
                         <label for="titulo">Título</label>
                         <input type="text" id="titulo" class="form-control" name="titulo" placeholder="Título" required>
@@ -64,6 +64,10 @@
                     <div class="form-group m-3">
                         <label for="duracao">Duração em minutos</label>
                         <input type="number" id="duracao" class="form-control" name="duracao" placeholder="Duração" required>
+                    </div>
+                    <div class="form-group m-3">
+                        <label for="imagem">Imagem</label>
+                        <input type="file" id="imagem" class="full-width" name="imagem" placeholder="Imagem" title="A imagem da produção precisa ser inserida em formato JPG ou PNG" required>
                     </div>
                     <div style="padding-bottom: 5%; padding-left: 40%">
                         <a href="index.php" class="btn btn-secondary">Cancelar</a>

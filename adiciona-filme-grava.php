@@ -8,11 +8,30 @@ $genero = $_POST['genero'];
 $diretor = $_POST['diretor'];
 $ano = $_POST['ano'];
 $duracao = $_POST['duracao'];
+$imagem = $_FILES['imagem'];
+$arquivoNome = "";
 
-$sql = "INSERT INTO filme (titulo, descricao, genero, diretor, ano, duracao)
-VALUES ('$titulo','$descricao', '$genero', '$diretor', $ano, $duracao)";
+$sql = "";
 
-$resultado = mysqli_query($conn,$sql);
+
+if(isset($_FILES["imagem"])){
+
+    $arquivo = $_FILES["imagem"]['name'];
+    $pasta_dir = "imagens/";
+    $arquivoNome = $pasta_dir . $arquivo;
+    move_uploaded_file($_FILES["imagem"]["tmp_name"], $arquivoNome);
+
+    $sql = "INSERT INTO filme (titulo, descricao, imagem, genero, diretor, ano, duracao)
+    VALUES ('$titulo','$descricao', '$arquivoNome', '$genero', '$diretor', $ano, $duracao)";
+    $resultado = mysqli_query($conn,$sql);
+}
+else{
+
+    $sql = "INSERT INTO filme (titulo, descricao, genero, diretor, ano, duracao)
+    VALUES ('$titulo','$descricao', '$genero', '$diretor', $ano, $duracao)";
+    $resultado = mysqli_query($conn,$sql);
+}
+
 
 if($resultado){
     header('Location:index.php');
