@@ -13,15 +13,14 @@ $bairro = $_POST['bairro'];
 $email = $_POST['email']; 
 $senha = $_POST['senha'];  
 $cpf = $_POST['cpf'];  
-$dataNascimento = $_POST['dataNascimento']; 
 
-$sql = "INSERT INTO usuario (nome, cep, logradouro, numero, cidade, uf, complemento, bairro, email, senha, cpf, dataNascimento) 
-VALUES ('$nome','$cep', '$logradouro', '$numero', '$cidade', '$uf', '$complemento', '$bairro', '$email', '$senha', '$cpf', '$dataNascimento')";
+$sql = "INSERT INTO usuario (nome, cep, logradouro, numero, cidade, uf, complemento, bairro, email, senha, cpf, nivel) 
+VALUES ('$nome','$cep', '$logradouro', '$numero', '$cidade', '$uf', '$complemento', '$bairro', '$email', '$senha', '$cpf', 'cliente')";
 
 $resultado = mysqli_query($conn,$sql);
 
 if($resultado){
-      header('Location:index.php');
+      header('Location:login.php');
   } else {
       echo "Erro na execução da consulta: " . mysqli_error($conn);
   }

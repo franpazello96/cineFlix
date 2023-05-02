@@ -1,3 +1,7 @@
+<?php 
+
+$nivel = $_SESSION['nivel'];
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -19,17 +23,17 @@
                             <li  class="nav-item">
                                 <a href="index.php" class="nav-link">HOME</a>
                             </li>
+                            <?php
+if($nivel == 'adm') {
+    // Mostrar o menu para administradores
+    echo '<li><a href="adiciona-filme.php" class="nav-link">CADASTRAR FILME</a></li>';
+} else {
+    // Não mostrar o menu
+}
+?>
 
-                            <li>
-                                <a href="adiciona-filme.php" class="nav-link">CADASTRAR FILME</a>
-                            </li>
                             
-                            <li  class="nav-item">
-                                <a href="doar.php" class="nav-link">CATEGORIAS</a>
-                            </li>
-                            <li  class="nav-item">
-                                <a href="contato.php" class="nav-link">FAQ</a>
-                            </li>
+
                             <li  class="nav-item divisor"></li>
                             
                            <li  class="nav-item">
@@ -39,7 +43,9 @@
                             <li  id='entrar' class="nav-item" style="display: flex; align-items: center;">
                                 <a href="login.php" class="nav-link">ENTRAR</a>
                             </li> 
-                            <div class="dropdown">
+
+
+                            <!-- <div class="dropdown">
                                 <button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     BUSCAR
                                 </button>
@@ -53,7 +59,7 @@
                                     <option value="3">Suspense</option>
                                 </select>
                             </div>
-                            </div>
+                            </div> -->
                         </ul>
                     </div>
                 </div>

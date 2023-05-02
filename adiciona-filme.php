@@ -101,40 +101,8 @@
     const ano = document.querySelector('#ano');
     const duracao = document.querySelector('#duracao');
 
-    // Adiciona um ouvinte de evento de envio ao formulário
-    form.addEventListener('submit', (event) => {
-        // Verifica se os campos estão vazios ou não preenchidos corretamente
-        if (!titulo.value) {
-            alert('Por favor, preencha o campo Título.');
-            event.preventDefault();
-        }
 
-        if (!descricao.value) {
-            alert('Por favor, preencha o campo Descrição.');
-            event.preventDefault();
-        }
 
-        if (!genero.value) {
-            alert('Por favor, preencha o campo Gênero.');
-            event.preventDefault();
-        }
-
-        if (!diretor.value) {
-            alert('Por favor, preencha o campo Diretor.');
-            event.preventDefault();
-        }
-
-        if (!tipo.value) {
-            alert('Por favor, preencha o campo Tipo.');
-            event.preventDefault();
-        }
-
-        if (!duracao.value || duracao.value <= 0) {
-            alert('Por favor, preencha o campo Duração com uma duração válida.');
-            event.preventDefault();
-        }
-
-    });
 
 
 </script>
