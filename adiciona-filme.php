@@ -1,3 +1,11 @@
+<?php 
+
+$nivel = $_SESSION['nivel'];
+if($nivel !== 'adm') {
+    header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
