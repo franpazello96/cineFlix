@@ -9,7 +9,7 @@
             <!---Inicio Navbar--->
             <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
                 <div class="container">
-                  <a href="index.php" class="navbar-brand text-white" style="font-size: 3em;  font-weight: 700; letter-spacing: -0.05em; ">CineFlix</a>
+                  <a href="index-logado.php" class="navbar-brand text-white" style="font-size: 3em;  font-weight: 700; letter-spacing: -0.05em; ">CineFlix</a>
                   <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
                     <i class="fas fa-bars text-white"></i>
                   </button>
@@ -17,7 +17,7 @@
                     <div class="collapse navbar-collapse" id="nav-principal">
                         <ul class="navbar-nav ml-auto">
                             <li  class="nav-item">
-                                <a href="index.php" class="nav-link">HOME</a>
+                                <a href="index-logado.php" class="nav-link">HOME</a>
                             </li>
 
                             
@@ -27,13 +27,21 @@
                           
                             
                            <li  class="nav-item">
-                                <a href="login-cadastro.php" class="nav-link">INSCREVER-SE</a>
+                                <a href="#" class="nav-link">FAVORITOS</a>
+                            </li>
+                            <li  class="nav-item divisor"></li>
+                            <li  class="nav-item">
+                                <a href="login-edita-cadastro.php" class="nav-link">MINHA CONTA</a>
                             </li>
                             <li  class="nav-item divisor"></li>
                             <li  id='entrar' class="nav-item" style="display: flex; align-items: center;">
-                                <a href="login.php" class="nav-link">ENTRAR</a>
+                                <a href="index.php" class="nav-link">SAIR</a>
                             </li> 
-
+                            <li  class="nav-item divisor"></li>
+                            <li  class="nav-item">
+                              <a href="#" class="nav-link"></a>
+                          </li>
+                       
 
                             <!-- <div class="dropdown">
                                 <button onclick="myFunction()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

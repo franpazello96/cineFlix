@@ -2,9 +2,8 @@
 
 
 <html lang="pt-br">
-    <?php require_once 'conexao.php';?>
     <?php require_once 'link.php';?>
-    <?php require_once 'menu.php';?>
+    <?php require_once 'menu-logado.php';?>
     <body>
 
         <!--Inicio Principal-->
@@ -15,8 +14,8 @@
                     <div class="col-md-12 capa">
                         <h1 >Filmes, séries e muito mais. Sem limites.</h1>
                         <h6 >Assista onde quiser. </h6>
-                        <a href="login-cadastro.php" class="btn  btn-azul btn-lg btn-custom">Criar Assinatura.</a>
-                        <a href="#" class="btn  btn-branco btn-lg btn-custom">NOSSOS FILMES </a>		
+                        <a href="" class="btn  btn-azul btn-lg btn-custom">FAVORITOS</a>
+                        <a href="#" class="btn  btn-branco btn-lg btn-custom">NOVOS FILMES </a>		
                     </div>
                 </div>
             </div>
@@ -27,23 +26,13 @@
         <section id="conteudo">
             <div class="container">
                 <div class="row">
-           
-                <div class="row albuns">
-                  
-                    <?php
-$sql = "SELECT * FROM filme";
-$run = mysqli_query($conn, $sql);
-if (mysqli_num_rows($run) > 0) {
-    while ($result = mysqli_fetch_assoc($run)) {
-        echo '
-        <div class="col-md-3">
-                     <img src="' . $result['imagem'] . '" class="img-fluid d-none d-md-block">
-                     <p style="color: white;"><strong style="color: darkred;">"' . $result['genero'] . '"</strong></p>
-                     </div>';
-    }
-}
-?>
-</div>
+                    <div class="col-md-6">
+                      <div class="row albuns">
+                        <div class="col-md-6">
+
+
+
+
                 </div>
             </div>
         </section>

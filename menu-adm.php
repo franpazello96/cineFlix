@@ -17,22 +17,24 @@
                     <div class="collapse navbar-collapse" id="nav-principal">
                         <ul class="navbar-nav ml-auto">
                             <li  class="nav-item">
-                                <a href="index.php" class="nav-link">HOME</a>
+                                <a href="index-adm.php" class="nav-link">HOME</a>
                             </li>
-
-                            
-
                             <li  class="nav-item divisor"></li>
                             
-                          
-                            
+                      
                            <li  class="nav-item">
-                                <a href="login-cadastro.php" class="nav-link">INSCREVER-SE</a>
+                                <a href="adiciona-filme.php" class="nav-link" >CADASTRAR FILME</a>
                             </li>
                             <li  class="nav-item divisor"></li>
-                            <li  id='entrar' class="nav-item" style="display: flex; align-items: center;">
-                                <a href="login.php" class="nav-link">ENTRAR</a>
-                            </li> 
+                            <li  class="nav-item">
+                                <a href="administrador.php" class="nav-link" >USUARIOS</a>
+                            </li>
+                            <li  class="nav-item divisor"></li>
+                            <li  class="nav-item">
+                                <a href="#" class="nav-link" >FILMES CADASTRADOS</a>
+                            </li>
+                            
+                         
 
 
                             <!-- <div class="dropdown">

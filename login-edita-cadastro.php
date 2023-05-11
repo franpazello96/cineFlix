@@ -56,11 +56,12 @@ if (isset($user_id)) {
                                     <div class="col-md-6">
                                           <div class="col-md-12 m-3">
                                                 <h2 class="mt-5 ml-2" style="font-size: 40px;">Olá <?php echo $row['nome'] ?></h2>
-                                                <form method="POST" action="login-cadastro-grava.php" name="login-cadastro-grava" id="login-cadastro-grava">
+                                                <form method="POST" action="login-edita-grava.php" name="login-edita-grava" id="login-edita-grava">
                                                       <div class="form-group">
+                                                            <input type="hidden" id="id" name="id" value="<?php echo $row['id']; ?>">
                                                             <input class="form-control m-2 col-12" type="text" id="nome" name="nome" placeholder="Nome: " value="<?php echo $row['nome']; ?>">
                                                             <input class="form-control m-2 col-12" type="email" id="email" name="email" placeholder="E-mail:  " value="<?php echo $row['email']; ?>">
-                                                            <input class="form-control m-2 col-12" type="password" id="senha" name="senha" placeholder="Senha:  " value="<?php echo $row['senha']; ?>">
+                                                            <input class="form-control m-2 col-12" type="password" id="senha" name="senha" placeholder="Senha:  " value="<?php echo substr($row['senha'], 0, 10); ?>" disabled>
                                                             <input class="form-control m-2 col-12" type="text" id="cpf" name="cpf" placeholder="CPF: " value="<?php echo $row['cpf']; ?>">
                                                             <input class="form-control m-2 col-12" type="text" id="cep" name="cep" placeholder="CEP: " value="<?php echo $row['cep']; ?>">
                                                             <input class="form-control m-2 col-12" type="text" id="logradouro" name="logradouro" placeholder="Logradouro: " value="<?php echo $row['logradouro']; ?>">
@@ -69,9 +70,11 @@ if (isset($user_id)) {
                                                             <input class="form-control m-2 col-12" type="text" id="bairro" name="bairro" placeholder="Bairro: " value="<?php echo $row['bairro']; ?>">
                                                             <input class="form-control m-2 col-12" type="text" id="cidade" name="cidade" placeholder="Cidade: " value="<?php echo $row['cidade']; ?>">
                                                             <input class="form-control m-2 col-12" type="text" id="uf" name="uf" placeholder="Estado: " value="<?php echo $row['uf']; ?>">
-                                                            <input class="form-control m-2 col-12" type="tel" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" id="telefone" name="telefone" placeholder="Telefone: " value="<?php echo $row['telefone']; ?>">>
+                                                            <input class="form-control m-2 col-12" type="tel" id="telefone" name="telefone" placeholder="Telefone: " value="<?php echo $row['telefone']; ?>">
                                                             <a href="index.php" class="btn btn-secondary ml-2">Voltar</a>
-                                                            <button type="submit" class="btn btn-primary ">Cadastrar</button>
+                                                            <button type="submit" class="btn btn-danger">Editar</button>
+                                                            <a href="login-apaga.php?id=<?php echo $row['id']; ?>" class="btn btn-danger ml-2 float-right" onclick="return confirm('Tem certeza de que deseja deletar sua conta?')">Deletar Conta</a>
+
                                                       </div>
                                                 </form>
                                           </div>
@@ -85,6 +88,31 @@ if (isset($user_id)) {
                               </div>
                         </div>
                   </section>
+
+
+                  <!-- Modal de confirmação -->
+                  <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                    <div class="modal-header">
+                                          <h5 class="modal-title" id="confirmDeleteModalLabel">Apagar Conta</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                <span aria-hidden="true">&times;</span>
+                                          </button>
+                                    </div>
+                                    <div class="modal-body">
+                                          Tem certeza de que deseja apagar sua conta?
+                                    </div>
+                                    <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                          <a href="login-apaga.php?id=<?php echo $result['id']; ?>" class="btn btn-danger">Apagar</a>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+
+
+
       <?php
 
 

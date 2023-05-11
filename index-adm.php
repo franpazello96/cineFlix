@@ -4,7 +4,7 @@
 <html lang="pt-br">
     <?php require_once 'conexao.php';?>
     <?php require_once 'link.php';?>
-    <?php require_once 'menu.php';?>
+    <?php require_once 'menu-adm.php';?>
     <body>
 
         <!--Inicio Principal-->
@@ -14,9 +14,7 @@
                 <div class="row">
                     <div class="col-md-12 capa">
                         <h1 >Filmes, séries e muito mais. Sem limites.</h1>
-                        <h6 >Assista onde quiser. </h6>
-                        <a href="login-cadastro.php" class="btn  btn-azul btn-lg btn-custom">Criar Assinatura.</a>
-                        <a href="#" class="btn  btn-branco btn-lg btn-custom">NOSSOS FILMES </a>		
+                        <h6 >Assista onde quiser. </h6>		
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@
 
 <head>
     <?php require_once 'link.php'; ?>
-    <?php require_once 'menu.php'; ?>
+    <?php require_once 'menu-adm.php'; ?>
     <link rel="stylesheet" href="css/layout.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
@@ -78,7 +78,8 @@
                     </div>
                     <div style="padding-bottom: 5%; padding-left: 40%">
                         <a href="index.php" class="btn btn-secondary">Cancelar</a>
-                        <button type="submit" onclick="validaAno()" class="btn btn-primary ">Cadastrar</button>
+                        
+                        <button type="submit" onclick="validaAno()" class="btn btn-danger">Cadastrar</button>
                     </div>
                 </form>
             </div>

@@ -5,7 +5,24 @@
     <?php require_once 'menu.php';?>
 </head>
 <body>
+
     <section id="login" >
+    <?php
+if(isset($_GET['erro'])){
+    $erro = $_GET['erro'];
+    switch($erro){
+        case 'credenciais-invalidas':
+            echo '<div class="alert alert-danger" role="alert">Credenciais inválidas. Por favor, verifique seu email, senha e CNPJ e tente novamente.</div>';
+            break;
+        case 'conta-inativa':
+            echo '<div class="alert alert-danger" role="alert">Sua conta foi removida!</div>';
+
+            break;
+        default:
+            break;
+    }
+}
+?>
         <div class="container aling-self-center"> 
             <div class="row">
                 <div class="col-md-12">
@@ -23,7 +40,9 @@
                                 <a href="index.php" class="btn btn-secondary">Voltar</a>	
                                 <button type="submit" class="btn btn-primary" >Entrar</button>
                             </div>
+                            
                         </form>
+                        
         </section>
 
 </body>

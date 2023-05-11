@@ -9,55 +9,8 @@
     require_once 'menu.php';
     ?>
 </head>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(function() {
-        // seleciona o campo do CEP
-        const cepInput = $('#cep');
 
-        // quando o campo do CEP perde o foco
-        cepInput.on('blur', function() {
-          // obtém o valor do CEP sem os caracteres não numéricos
-          const cep = cepInput.val().replace(/\D/g, '');
-
-          // se o CEP tem 8 dígitos
-          if (cep.length === 8) {
-            // faz uma requisição GET à API ViaCEP
-            $.get('https://viacep.com.br/ws/' + cep + '/json/', function(data) {
-              // preenche os campos do endereço
-              $('#logradouro').val(data.logradouro);
-              $('#bairro').val(data.bairro);
-              $('#cidade').val(data.localidade);
-              $('#uf').val(data.uf);
-            });
-          }
-        });
-      });
-    </script>
 <body>
-    <!-- <script>
-    var crypt = {
-        secret: "THESECRET",
-        encrypt: function (senha) {
-            var cipher = CryptoJS.AES.encrypt (senha, this.secret);
-            cipher = cipher.toString();
-            return cipher;
-        },
-        decrypt: function (cipher) {
-            var decipher = CryptoJS.AES.decrypt (cipher, crypt.secret);
-            decipher = decipher.toString (CryptoJS.enc. Utf8);
-            return decipher;
-        }
-    }
-
-    function handleForm(event) {
-        var senha = document.getElementById("senha")
-        var cipher = crypt.encrypt(senha.value);
-        console.log(cipher);
-        senha.value = cipher
-        
-    } 
-</script> -->
     <section id="conteudo">
         <div class="container mt-5">
             <div class="row">
@@ -79,7 +32,7 @@
                                 <input class="form-control m-2 col-12" type="text" id="uf" name="uf" placeholder="Estado: ">
                                 <input class="form-control m-2 col-12" type="text" id="telefone" name="telefone" placeholder="Telefone: " required>
                                 <a href="index.php" class="btn btn-secondary ml-2">Voltar</a>
-                                <button type="submit" class="btn btn-primary ">Cadastrar</button>
+                                <button type="submit" class="btn btn-danger ">Cadastrar</button>
                             </div>
                         </form>
                     </div>
@@ -94,10 +47,16 @@
         </div>
     </section>
     <?php require_once 'rodape.php' ?>
+    <script src="/script/cep.js">
+    </script>
 </body>
 
 </html>
 <script>
+
+
+
+
     const emailInput = document.getElementById('email');
     emailInput.addEventListener('blur', function() {
         const email = emailInput.value;
@@ -148,11 +107,9 @@
 
 
     function formatCep(cepInput) {
-  let cep = cepInput.value;
-  cep = cep.replace(/\D/g, ''); // Remove todos os caracteres que não são dígitos
-  cep = cep.substring(0, 5) + '-' + cep.substring(5, 8); // Adiciona o hífen entre o quinto e o sexto dígitos
-  cepInput.value = cep;
-}
-
-
+        let cep = cepInput.value;
+        cep = cep.replace(/\D/g, ''); // Remove todos os caracteres que não são dígitos
+        cep = cep.substring(0, 5) + '-' + cep.substring(5, 8); // Adiciona o hífen entre o quinto e o sexto dígitos
+        cepInput.value = cep;
+    }
 </script>

@@ -1,6 +1,10 @@
 
 <?php   
- include 'conexao.php';  
+session_start();
+require_once 'conexao.php';
+require_once 'link.php';
+require_once 'menu-adm.php';
+
  $query = "select * from usuario";  
  $run = mysqli_query($conn,$query);  
  ?>  
@@ -8,21 +12,23 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php require_once 'link.php';?>
-    <?php require_once 'menu.php';?>
     <body>
         <!--Inicio Outros-->
         <section id="conteudo">
             <div class="container mt-5">
                 <div  class="row">
-                <h2 class="mt-5">TELA ADM: </h2>    
+                <h2 class="mt-5">TELA ADM:  </h2>    
                 <table class="table table-hover table-bordered">
-                    <thead class="table-info">
+                    <thead class="table-danger">
                             <tr>
                                 <th>ID</th>
-                                <th>Bairro</th>
+                          
                                 <th>Cidade</th>
                                 <th>Estado</th>
+                                <th>Email</th>
+                                <th>Telefone</th>
+                                <th>Nivel</th>
+                                <th>Situação</th>
                                 <th>Ação</th>
                             </tr>
                             <?php   
@@ -32,23 +38,31 @@
                                     echo "  
                                         <tr class='data'>  
                                         <td>".$i++."</td>  
-                                            <td>".$result['id']."</td>  
-                                            <td>".$result['email']."</td>  
-                                            <td>".$result['bairro']."</td>  
-                                            <td><a href='administrador_apaga.php?id=".$result['id']."' id='btn' class='btn btn-danger'>Delete</a></td>  
-                                        </tr>  
+                                            <td>".$result['cidade']."</td>  
+                                            <td>".$result['uf']."</td>  
+                                            <td>".$result['email']."</td> 
+                                            <td>".$result['telefone']."</td> 
+                                            <td>".$result['nivel']."</td> 
+                                            <td>".$result['situacao']."</td> 
+                                            <td><a href='login-edita-adm.php?id=".$result['id']."' id='btn' class='btn btn-danger'>Editar</a> </td>  
+
+                                            </tr>  
                                     ";  
                                 }  
                              }  
                            ?>  
                         </thead>
                         </tbody>
-                        <tfoot class="table-info">
+                        <tfoot class="table-danger">
                             <tr>
                                 <th>ID</th>
-                                <th>Bairro</th>
+                                
                                 <th>Cidade</th>
                                 <th>Estado</th>
+                                <th>Email</th>
+                                <th>Telefone</th>
+                                <th>Nivel</th>
+                                <th>Situação</th>
                                 <th>Ação</th>
                             </tr>
                         </tfoot>
