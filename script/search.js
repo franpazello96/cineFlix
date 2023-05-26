@@ -34,7 +34,11 @@ function Search() {
        const valor =  input.value
         var url_string = window.location.href
         var last_string = url_string.split('/').pop();
-        url_string = url_string.replace(last_string, 'filmes-lista.php')
+        if (last_string == '') {
+            url_string = url_string + 'filmes-lista.php'
+        } else {
+            url_string = url_string.replace(last_string, 'filmes-lista.php')
+        }        
         var url = new URL(url_string);
         url.searchParams.set('titulo', valor)
         window.location.href = url
