@@ -48,13 +48,13 @@
 </head>
 <body>
         <div class="box">
-            <h3> Filmes/Series</h3>
+            <h3 style="margin-left:40px;"> Filmes/Series</h3>
                 <form id='form'>
                     <div class="form">
                         <div class="input-group m-2">
                             <input type="text" id="titulo" class="form-control" name="titulo" placeholder="Titulo">
                         </div>
-                        <select id="genero" name="genero" onclick="setValue(value)" class="form-control m-2">
+                        <select id="genero" name="genero" class="form-control m-2">
                             <option value="">Gênero</option>
                             <option value="Ação">Ação</option>
                             <option value="Animação">Animação</option>
@@ -141,7 +141,8 @@ form.addEventListener('reset', () => {
 .form {
     display: flex; 
     width: 70%; 
-    min-height: 140px
+    min-height: 140px;
+    margin-left: 40px;
 }
 @media (max-width: 600px) {
     .form {
@@ -156,7 +157,6 @@ form.addEventListener('reset', () => {
 }
 .box {
     margin-top: 120px;
-    margin-left: 40px;
 }
 .image {
     height: 270px;
@@ -166,14 +166,15 @@ form.addEventListener('reset', () => {
 .filmes {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;;
     background-color: #1F1F1F;
-    margin-left: -40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 0px 130px;
 }
 
 .notFound{
     display: flex;
     height: 100px;
+    font-size: 20px;
     align-items: center;
 }
 
@@ -184,9 +185,9 @@ form.addEventListener('reset', () => {
 .filmeBox {
     flex-direction: column;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin: 15px 50px 10px;
+    margin: 15px 40px 10px;
+    max-width: 200px;
 }
 
 .filmeBox span {

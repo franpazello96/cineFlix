@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 $nivel = $_SESSION['nivel'];
 if($nivel !== 'adm') {
     header("Location: login.php");

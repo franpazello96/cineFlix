@@ -20,7 +20,7 @@
 
                             <li id="search" style="display: flex;">
                                 <button onclick="Search()">
-                                    <i onclick="Search()" class="bi-search"></i>
+                                    <i class="bi-search"></i>
                                 </button>
                                 <input class="hidden visuallyhidden" id="input" type="text" placeholder="Search...">
                             </li>

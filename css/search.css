@@ -33,7 +33,7 @@
 #search input {
     transition: all 0.3s ease-out;
     margin-right: 10px;
-    width: 240px;
+    width: 200px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border: none;
     color: inherit;

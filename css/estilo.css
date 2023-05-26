@@ -82,7 +82,12 @@ hr{
 }
 
 .albuns{
-    padding: 10px 0px;
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    /* background-color: #1F1F1F; */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 0px 130px;
 }
 
 #login{

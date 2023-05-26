@@ -7,7 +7,7 @@
     <?php require_once 'menu.php';?>
     <body>
 
-        <!--Inicio Principal-->
+        <!-- <section--Inicio Principal> -->
         <section id="home" class="d-flex">
 
             <div class="container align-self-center">
@@ -24,29 +24,29 @@
 
         <!--Fim Principal-->
         <!--Inicio Conteudo-->
-        <section id="conteudo">
+        <!-- <section id="conteudo">
             <div class="container">
-                <div class="row">
+                <div class="row"> -->
            
                 <div class="row albuns">
                   
-                    <?php
+                <?php
 $sql = "SELECT * FROM filme";
 $run = mysqli_query($conn, $sql);
 if (mysqli_num_rows($run) > 0) {
     while ($result = mysqli_fetch_assoc($run)) {
         echo '
-        <div class="col-md-3">
-                     <img src="' . $result['imagem'] . '" class="img-fluid d-none d-md-block">
-                     <p style="color: white;"><strong style="color: darkred;">"' . $result['genero'] . '"</strong></p>
-                     </div>';
+                <div class="filmeBox col">
+                <span> ' . $result['titulo'] . ' </span>
+                    <img class="image" src="' . $result['imagem'] . '" class="img-fluid d-none d-md-block">
+                </div>';
     }
 }
 ?>
 </div>
-                </div>
+                <!-- </div>
             </div>
-        </section>
+        </section> -->
 
 <?php require_once 'rodape.php'?>
 <!---- JavaScript ----->
@@ -55,3 +55,23 @@ if (mysqli_num_rows($run) > 0) {
     <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
+
+<style>
+.image {
+    height: 270px;
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.filmeBox {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin: 15px 40px 10px;
+    max-width: 200px;
+}
+
+.filmeBox span {
+    color: white;
+}
+</style>
