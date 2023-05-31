@@ -13,7 +13,8 @@ $bairro = $_POST['bairro'];
 $email = $_POST['email']; 
 $senha = $_POST['senha'];  
 $cpf = $_POST['cpf']; 
-$telefone = $_POST['telefone'];  
+$telefone = $_POST['telefone']; 
+
 
 $sql = "INSERT INTO usuario (nome, cep, logradouro, numero, cidade, uf, complemento, bairro, email, senha, cpf, telefone, nivel, situacao) 
 VALUES ('$nome','$cep', '$logradouro', '$numero', '$cidade', '$uf', '$complemento', '$bairro', '$email', md5('$senha'), '$cpf', '$telefone', 'cliente', 'ativo')";
