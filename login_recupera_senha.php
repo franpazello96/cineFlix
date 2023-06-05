@@ -3,6 +3,28 @@
 <head>
     <?php require_once 'link.php';?>
     <?php require_once 'menu.php';?>
+    <?php
+    session_start();
+  
+
+    // Set the default session name
+    $s_name = session_name();
+
+    if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1200)) {
+        // Last request was more than 20 seconds ago
+        session_unset();     // Unset $_SESSION variable for the run-time
+        session_destroy();   // Destroy session data in storage
+        echo "Session expired at " .  gmdate("H:i:s", time()) .  "<br/>";
+        echo '<meta http-equiv="refresh" content="1;url=index.php">';
+        echo '<script>alert("Sessão expirada");</script>';
+    
+    
+    }
+    
+
+    $_SESSION['LAST_ACTIVITY'] = time(); // Update last activity time stamp
+    echo "Session created for $s_name, at " . gmdate("H:i:s", time()) .  "<br/>";
+    ?>
 </head>
 <body>
 

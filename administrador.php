@@ -4,10 +4,26 @@ session_start();
 require_once 'conexao.php';
 require_once 'link.php';
 require_once 'menu-adm.php';
+ 
+// Set the default session name
+$s_name = session_name();
 
- $query = "select * from usuario";  
- $run = mysqli_query($conn,$query);  
- ?>  
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1200)) {
+    // Last request was more than 1 second ago
+    session_unset();     // Unset $_SESSION variable for the run-time
+    session_destroy();   // Destroy session data in storage
+    echo "Session expired at " .  gmdate("H:i:s", time()) .  "<br/>";
+    echo '<meta http-equiv="refresh" content="1;url=index.php">';
+    echo '<script>alert("Sessão expirada");</script>';
+    exit();
+}
+
+$_SESSION['LAST_ACTIVITY'] = time(); // Update last activity timestamp
+echo "Session created for $s_name, at " . gmdate("H:i:s", time()) .  "<br/>";
+
+$query = "SELECT * FROM usuario";  
+$run = mysqli_query($conn, $query);  
+?>
 
 
 <!DOCTYPE html>

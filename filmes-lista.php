@@ -1,8 +1,21 @@
-
 <?php
     require_once 'link.php';
     require_once 'menu.php';
     require_once 'conexao.php';
+    session_start();
+    $s_name = session_name();
+    
+    if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1200)) {
+        // Last request was more than 1 second ago
+        session_unset();     // Unset $_SESSION variable for the run-time
+        session_destroy();   // Destroy session data in storage
+        echo "Session expired at " .  gmdate("H:i:s", time()) .  "<br/>";
+        echo '<meta http-equiv="refresh" content="1;url=index.php">'; // Refresh after 5 seconds
+        
+    }
+    
+    $_SESSION['LAST_ACTIVITY'] = time(); // Update last activity timestamp
+    echo "Session created for $s_name, at " . gmdate("H:i:s", time()) .  "<br/>";
     if (isset($_GET['titulo'])) {
         $_GET['titulo'] != '' ? $titulo = $_GET['titulo']: $titulo = 'titulo'; 
     } else {
