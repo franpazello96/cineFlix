@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once 'link.php';
     require_once 'menu.php';
     require_once 'conexao.php';
@@ -16,6 +17,17 @@
     
     $_SESSION['LAST_ACTIVITY'] = time(); // Update last activity timestamp
     echo "Session created for $s_name, at " . gmdate("H:i:s", time()) .  "<br/>";
+
+
+    $user_id = $_SESSION['id'];
+    if (isset($_GET['filme']) and isset($_GET['rating'])) {
+        $filme = $_GET['filme'];
+        $rating = $_GET['rating'];
+        $sql = "UPDATE `cineflix`.`favoritos` SET `rating` = '$rating' WHERE (`filme_id` = '$filme') and (`usuario_id` = '$user_id')";
+        $conn->query($sql);
+    }
+
+
     if (isset($_GET['titulo'])) {
         $_GET['titulo'] != '' ? $titulo = $_GET['titulo']: $titulo = 'titulo'; 
     } else {
@@ -32,7 +44,8 @@
         $diretor = 'diretor';
     };
 
-    $sql = "SELECT imagem, titulo, genero FROM cineflix.filme WHERE titulo = '$titulo' AND genero = '$genero' AND diretor = '$diretor'";
+    $sql = "SELECT id, imagem, titulo, genero FROM cineflix.filme WHERE titulo = '$titulo' AND genero = '$genero' AND diretor = '$diretor'";
+    $sqlFavoritos = "SELECT * FROM cineflix.favoritos WHERE (`usuario_id` = '$user_id')";
     if (strpos($sql, "'titulo'")) {
         $sql = str_replace("'titulo'", "titulo", $sql);
     }
@@ -49,6 +62,7 @@
         $sql = "SELECT imagem, titulo, genero FROM cineflix.filme WHERE titulo = '$titulo' limit 0";
         $run = $conn->query($sql);
     }
+    $runFavoritos = $conn->query($sqlFavoritos);
 
 ?>
 <!DOCTYPE html>
@@ -99,21 +113,76 @@ document.getElementById('titulo').value = url.searchParams.get("titulo")
 document.getElementById('genero').value = url.searchParams.get("genero") ? url.searchParams.get("genero") : ''
 document.getElementById('diretor').value = url.searchParams.get("diretor")
 
-const result = <?php echo json_encode(mysqli_fetch_all($run, MYSQLI_ASSOC))?>;
-const t = <?php echo json_encode($sql)?>;
+var result = <?php echo json_encode(mysqli_fetch_all($run, MYSQLI_ASSOC))?>;
+const resultFavoritos = <?php echo json_encode(mysqli_fetch_all($runFavoritos, MYSQLI_ASSOC))?>;
+result.map((filme, index) => {
+    resultFavoritos.map(favorito => {
+        if (filme.id == favorito.filme_id) {
+            result[index].rating = favorito.rating
+        }
+    })
+})
 
 var filmes = document.getElementsByClassName('filmes')
+result.sort((a, b) => b.rating - a.rating)
 if (result.length) {
     result.map(v => {
         var div = document.createElement('div')
+        div.classList.add('filmeBox', 'col') 
         var span = document.createElement('span')
-        div.classList.add('filmeBox', 'col')
-        var image = document.createElement('img')
-        image.classList.add('image')
-        image.setAttribute('src', v.imagem);
+        span.classList.add('filmeBoxTitulo')
         span.innerHTML = v.titulo
+        var image = document.createElement('img')
+        image.setAttribute('src', v.imagem);
+        image.classList.add('image')
+        if (resultFavoritos.length) {
+            spanList = {}
+            for (let i = 1; i < 6; i++) {
+                spanList['li' + i] = document.createElement('li');
+                spanList['li' + i].setAttribute('id', 'star' + i);
+                spanList['li' + i].setAttribute('value', i);
+                spanList['li' + i].classList.add('star', 'fa', 'fa-star')
+                spanList['li' + i].addEventListener('mouseover', (event) => {
+                    for (const starChildren of event.target.parentElement.children) {
+                        starChildren.value <= event.target.value ? starChildren.classList.add('checked') : starChildren.classList.remove("checked") 
+                    }
+                })
+            }
+            var ratingBox = document.createElement('ol')
+            ratingBox.classList.add('ratingBox')
+            for (let i = 1; i < 6; i++) {
+                ratingBox.appendChild(spanList['li'+i])
+            }
+            for (const starChildren of ratingBox.children) {
+                v.rating >= starChildren.value ? starChildren.classList.add('definite_checked') : undefined
+            }
+            ratingBox.addEventListener('mouseleave', (event)=>{
+                for (const starChildren of event.target.children) {
+                    starChildren.classList.remove('checked')
+                    starChildren.classList.replace("definite_checked_off", "definite_checked") 
+                }
+            })
+            ratingBox.addEventListener('mouseenter', (event) => {
+                for (const starChildren of event.target.children) {
+                    starChildren.classList.replace("definite_checked", "definite_checked_off") 
+                }
+            })
+            ratingBox.addEventListener('click', (event) => {
+                for (const starChildren of event.target.parentElement.children) {
+                    console.log(starChildren.classList.contains("checked"))
+                    starChildren.classList.contains("checked") ? starChildren.classList.add('definite_checked_off') : starChildren.classList.remove('definite_checked_off')
+                }
+                url.searchParams.set('filme', v.id)
+                url.searchParams.set('rating', event.target.value)
+                window.location.href = url
+
+            })
+        }
         div.appendChild(span)
         div.appendChild(image)
+        if (resultFavoritos.length) {
+                   div.appendChild(ratingBox) 
+        }
         filmes[0].appendChild(div)
     })
 } else {
@@ -131,10 +200,28 @@ form.addEventListener('reset', () => {
     window.location.href = url
 })
 
-
 </script>
 
 <style>
+.ratingBox {
+    display: inline;
+    cursor: pointer;
+    padding: 0px;
+    margin-right: 80px;
+}
+.star {
+    color: white;
+}
+.checked {
+    color: #df0000;
+}
+.definite_checked_off {}
+
+.definite_checked {
+    color: #df0000
+}
+
+
 .btn {
     height: 48px;
     border-radius: 10px;
@@ -203,7 +290,7 @@ form.addEventListener('reset', () => {
     max-width: 200px;
 }
 
-.filmeBox span {
+.filmeBoxTitulo {
     color: white;
 }
 
