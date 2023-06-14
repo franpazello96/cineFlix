@@ -3,7 +3,6 @@
 <html lang="pt-br">
 <head>
     <?php
-    session_start();
     require_once 'link.php';
     require_once 'menu.php';
     $s_name = session_name();

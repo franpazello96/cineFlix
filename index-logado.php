@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php require_once 'conexao.php';?>
-    <?php require_once 'link.php';?>
-    <?php require_once 'menu-logado.php';?>
+<?php 
+     require_once 'conexao.php';
+  require_once 'link.php';
+     require_once 'menu-logado.php';?>
     <body>
         <section id="home" class="d-flex">
             <div class="container align-self-center">

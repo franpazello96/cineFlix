@@ -1,16 +1,4 @@
-<<<<<<< Updated upstream
-<?php 
 
-session_start();
-
-$nivel = $_SESSION['nivel'];
-if($nivel !== 'adm') {
-    header("Location: login.php");
-}
-?>
-
-=======
->>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="pt-br">
 

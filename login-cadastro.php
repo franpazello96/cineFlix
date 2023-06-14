@@ -1,12 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <?php
+
+    
     require_once 'link.php';
     require_once 'menu.php';
-    session_start();
+
 
 
 // Set the default session name

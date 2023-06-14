@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php require_once 'link.php';?>
+    <?php 
+    require_once 'link.php';?>
     <?php require_once 'menu.php';?>
     <?php
-    session_start();
+
   
 
     // Set the default session name

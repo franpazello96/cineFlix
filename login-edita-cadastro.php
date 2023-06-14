@@ -1,8 +1,7 @@
 <?php
-session_start();
 require_once 'conexao.php';
 require_once 'link.php';
-require_once 'menu.php';
+require_once 'menu-logado.php';
 // Set the default session name
 $s_name = session_name();
 
@@ -88,6 +87,7 @@ if (isset($user_id)) {
                                                             <input class="form-control m-2 col-12" type="text" id="cidade" name="cidade" placeholder="Cidade: " value="<?php echo $row['cidade']; ?>">
                                                             <input class="form-control m-2 col-12" type="text" id="uf" name="uf" placeholder="Estado: " value="<?php echo $row['uf']; ?>">
                                                             <input class="form-control m-2 col-12" type="tel" id="telefone" name="telefone" placeholder="Telefone: " value="<?php echo $row['telefone']; ?>">
+                                                            <input class="form-control m-2 col-12" type="file" id="imagem" name="imagem" placeholder="Imagem"  value="<?php echo $row['imagem']; ?>" required>
                                                             <a href="index-logado.php" class="btn btn-secondary ml-2">Voltar</a>
                                                             <button type="submit" class="btn btn-danger">Editar</button>
                                                             <a href="login-apaga.php?id=<?php echo $row['id']; ?>" class="btn btn-danger ml-2 float-right" onclick="return confirm('Tem certeza de que deseja deletar sua conta?')">Deletar Conta</a>
@@ -98,7 +98,7 @@ if (isset($user_id)) {
                                     </div>
                                     <div class="col-md-6" style="margin-top: 100px;">
                                           <div class="col-md-12 m-3">
-                                                <img id="img" src="<?php echo $row['imagem']; ?>" width="100%" height="70%">
+                                                <img style="  border-radius: 50%;" id="img" src="<?php echo $row['imagem']; ?>" width="100%" height="70%">
                                           </div>
                                     </div>
 

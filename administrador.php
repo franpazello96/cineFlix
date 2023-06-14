@@ -1,10 +1,10 @@
 
 <?php   
-session_start();
+
 require_once 'conexao.php';
 require_once 'link.php';
 require_once 'menu-adm.php';
- 
+
 // Set the default session name
 $s_name = session_name();
 

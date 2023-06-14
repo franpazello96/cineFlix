@@ -1,7 +1,3 @@
-<?php
-    session_start();
-    ?> 
-    
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -37,6 +33,10 @@
                             <li  class="nav-item divisor"></li>
                             <li  class="nav-item">
                                 <a href="filmes_cadastrados.php" class="nav-link" >FILMES CADASTRADOS</a>
+                            </li>
+                            <li  class="nav-item divisor"></li>
+                            <li class="nav-item" style="display: flex; align-items: center;">
+                            <a href="index.php" class="nav-link">SAIR</a>
                             </li>
                         </ul>
                     </div>

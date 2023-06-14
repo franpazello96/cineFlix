@@ -1,6 +1,6 @@
 
 <?php   
-session_start();
+
 require_once 'conexao.php';
 require_once 'link.php';
 require_once 'menu-adm.php';

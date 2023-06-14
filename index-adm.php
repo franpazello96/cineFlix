@@ -2,11 +2,12 @@
 
 
 <html lang="pt-br">
-    <?php require_once 'conexao.php';?>
-    <?php require_once 'link.php';?>
-    <?php require_once 'menu-adm.php';?>
-    <?php
-    session_start();
+<?php 
+     require_once 'conexao.php';
+   require_once 'link.php';
+     require_once 'menu-adm.php';
+     
+
     
 
     // Set the default session name

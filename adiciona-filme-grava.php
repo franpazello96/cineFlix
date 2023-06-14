@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 require_once 'conexao.php';
 $user_id = $_SESSION['id'];
 $titulo = mysqli_real_escape_string($conn, $_POST['titulo']);

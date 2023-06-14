@@ -1,5 +1,4 @@
 <?php
-    session_start();
     require_once 'link.php';
     require_once 'menu.php';
     require_once 'conexao.php';

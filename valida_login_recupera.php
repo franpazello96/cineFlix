@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require_once 'conexao.php';
 
 if (isset($_POST['email']) && isset($_POST['senha'])) {
