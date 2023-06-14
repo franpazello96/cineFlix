@@ -98,6 +98,7 @@
                         <button type="reset" class="btn btn-secondary btn-sm ml-1" >Clear</button>
                     </div>
                 <form>
+                <div class="filmes row"></div>
 </body>
 </html>
 
@@ -251,12 +252,8 @@ form.addEventListener('reset', () => {
 }
 }
 .box {
-<<<<<<< Updated upstream
-    margin-top: 120px;
-=======
     margin-top: 2em;
     margin-left: 2em;
->>>>>>> Stashed changes
 }
 .image {
     height: 25em;
