@@ -33,12 +33,16 @@ function Search() {
     if (input.value !== '') {
        const valor =  input.value
         var url_string = window.location.href
+<<<<<<< Updated upstream
         var last_string = url_string.split('/').pop();
         if (last_string == '') {
             url_string = url_string + 'filmes-lista.php'
         } else {
             url_string = url_string.replace(last_string, 'filmes-lista.php')
         }        
+=======
+        url_string = url_string.replace('index.php')
+>>>>>>> Stashed changes
         var url = new URL(url_string);
         url.searchParams.set('titulo', valor)
         window.location.href = url

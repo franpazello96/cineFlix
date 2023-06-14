@@ -3,7 +3,6 @@
     require_once 'link.php';
     require_once 'menu.php';
     require_once 'conexao.php';
-    session_start();
     $s_name = session_name();
     
     if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1200)) {
@@ -96,13 +95,10 @@
                         <div class="input-group m-2">
                             <input type="text" id="diretor" class="form-control" name="diretor" placeholder="Diretor">
                         </div>
-                        <button type="submit" class="btn btn-danger btn-sm ml-2" style="background-color: darkred;">Search</button>
-                        <button type="reset" class="btn btn-secondary btn-sm ml-2" >Clear</button>
+                        <button type="submit" class="btn btn-danger btn-sm ml-1" style="background-color: darkred;">Search</button>
+                        <button type="reset" class="btn btn-secondary btn-sm ml-1" >Clear</button>
                     </div>
                 <form>
-            <div class="filmes row"></div>
-        </div>
-    <?php require_once 'rodape.php' ?>
 </body>
 </html>
 
@@ -256,11 +252,15 @@ form.addEventListener('reset', () => {
 }
 }
 .box {
+<<<<<<< Updated upstream
     margin-top: 120px;
+=======
+    margin-top: 2em;
+    margin-left: 2em;
+>>>>>>> Stashed changes
 }
 .image {
-    height: 270px;
-    width: 200px;
+    height: 25em;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .filmes {

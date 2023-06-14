@@ -88,7 +88,7 @@ if (isset($user_id)) {
                                                             <input class="form-control m-2 col-12" type="text" id="cidade" name="cidade" placeholder="Cidade: " value="<?php echo $row['cidade']; ?>">
                                                             <input class="form-control m-2 col-12" type="text" id="uf" name="uf" placeholder="Estado: " value="<?php echo $row['uf']; ?>">
                                                             <input class="form-control m-2 col-12" type="tel" id="telefone" name="telefone" placeholder="Telefone: " value="<?php echo $row['telefone']; ?>">
-                                                            <a href="index.php" class="btn btn-secondary ml-2">Voltar</a>
+                                                            <a href="index-logado.php" class="btn btn-secondary ml-2">Voltar</a>
                                                             <button type="submit" class="btn btn-danger">Editar</button>
                                                             <a href="login-apaga.php?id=<?php echo $row['id']; ?>" class="btn btn-danger ml-2 float-right" onclick="return confirm('Tem certeza de que deseja deletar sua conta?')">Deletar Conta</a>
 

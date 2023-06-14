@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+    ?> 
+    <!DOCTYPE html>
 <html lang="pt-br">
     <head>
     <?php require_once 'link.php';?>
@@ -17,15 +20,14 @@
                     <div class="collapse navbar-collapse" id="nav-principal">
                         <ul class="navbar-nav ml-auto">
 
-
+<!---
                             <li id="search" style="display: flex;">
                                 <button onclick="Search()">
                                     <i class="bi-search"></i>
                                 </button>
                                 <input class="hidden visuallyhidden" id="input" type="text" placeholder="Search...">
                             </li>
-
-
+--->
 
                             <li  class="nav-item">
                                 <a href="index.php" class="nav-link">HOME</a>

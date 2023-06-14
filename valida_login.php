@@ -17,11 +17,15 @@ if((isset($_POST['email'])) && (isset($_POST['senha']))){
         $_SESSION['email'] = $resultado['email'];
         $_SESSION['senha'] = $resultado['senha'];
         $_SESSION['nivel'] = $resultado['nivel'];
+        $_SESSION['situacao'] = $resultado['situacao'];
 
-        if($_SESSION['nivel'] == "cliente"){
+        if($_SESSION['nivel'] == "cliente" &&  $_SESSION['situacao'] == "ativo" ){
             header("Location: index-logado.php");
-        }elseif($_SESSION['nivel'] == "adm"){
+        }elseif($_SESSION['nivel'] == "adm" &&  $_SESSION['situacao'] == "ativo"){
             header("Location: administrador.php");
+        }else{    
+            echo  "Usuário Inativo! Favor entrar em contato com o suporte!";
+            header("location: index.php");
         }
     }else{    
         ?>

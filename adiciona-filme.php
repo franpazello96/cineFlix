@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?php 
 
 session_start();
@@ -8,6 +9,8 @@ if($nivel !== 'adm') {
 }
 ?>
 
+=======
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -94,6 +97,7 @@ if($nivel !== 'adm') {
                             <option value="Alfred Hitchcock">Alfred Hitchcock</option>
                             <option value="Stanley Kubrick">Stanley Kubrick</option>
                             <option value="Francis Ford Coppola">Francis Ford Coppola</option>
+                            <option value="Dennis Dugan">Dennis Dugan</option>
                         </select>
                     </div>
                     <div class="form-group m-3">
@@ -109,6 +113,13 @@ if($nivel !== 'adm') {
                         <label for="imagem" class="form-control">Imagem</label>
                         <input type="file" id="imagem" class="form-control" name="imagem" placeholder="Imagem" required>
                     </div>
+
+                    <div class="form-group m-3" >
+                        <label for="link">Link</label>
+                        <input type="text" id="link" class="form-control" name="link" placeholder="Link" required>
+                    </div>
+
+
                     <div style="padding-bottom: 5%; padding-left: 40%">
                         <a href="index.php" class="btn btn-secondary">Cancelar</a>
                         

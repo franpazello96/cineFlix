@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    ?> 
+    
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -17,12 +21,6 @@
                     <div class="collapse navbar-collapse" id="nav-principal">
                         <ul class="navbar-nav ml-auto">
 
-                            <li id="search" style="display: flex;">
-                                <button onclick="Search()">
-                                    <i class="bi-search"></i>
-                                </button>
-                                <input class="hidden visuallyhidden" id="input" type="text" placeholder="Search...">
-                            </li> 
                             <li  class="nav-item">
                                 <a href="index-adm.php" class="nav-link">HOME</a>
                             </li>
@@ -38,7 +36,7 @@
                             </li>
                             <li  class="nav-item divisor"></li>
                             <li  class="nav-item">
-                                <a href="#" class="nav-link" >FILMES CADASTRADOS</a>
+                                <a href="filmes_cadastrados.php" class="nav-link" >FILMES CADASTRADOS</a>
                             </li>
                         </ul>
                     </div>
