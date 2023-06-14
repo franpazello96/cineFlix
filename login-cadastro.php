@@ -36,7 +36,7 @@
                 <div class="col-md-6">
                     <div class="col-md-12 m-3">
                         <h2 class="mt-5 ml-2" style="font-size: 40px;">Cadastre-se</h2>
-                        <form method="POST" action="login-cadastro-grava.php" name="login-cadastro-grava" id="login-cadastro-grava">
+                        <form method="POST" enctype="multipart/form-data" action="login-cadastro-grava.php" name="login-cadastro-grava" id="login-cadastro-grava">
                             <div class="form-group">
                                 <input class="form-control m-2 col-12" type="text" id="nome" name="nome" placeholder="Nome: " required>
                                 <input class="form-control m-2 col-12" type="email" id="email" name="email" placeholder="E-mail:  " required>
@@ -50,6 +50,7 @@
                                 <input class="form-control m-2 col-12" type="text" id="cidade" name="cidade" placeholder="Cidade: ">
                                 <input class="form-control m-2 col-12" type="text" id="uf" name="uf" placeholder="Estado: ">
                                 <input class="form-control m-2 col-12" type="text" id="telefone" name="telefone" placeholder="Telefone: " required>
+                                <input class="form-control m-2 col-12" type="file" id="imagem" name="imagem" placeholder="Imagem" required>
                                 <a href="index.php" class="btn btn-secondary ml-2">Voltar</a>
                                 <button type="submit" class="btn btn-danger ">Cadastrar</button>
                             </div>

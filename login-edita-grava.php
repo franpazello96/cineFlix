@@ -17,9 +17,16 @@
       $senha = $_POST['senha'];  
       $cpf = $_POST['cpf']; 
       $telefone = $_POST['telefone']; 
+      $imagem = $_POST['imagem'];
+      $arquivoNome = "";
+      $arquivo = $_FILES["imagem"]['name'];
+      $pasta_dir = "imagens/";
+      $arquivoNome = $pasta_dir . $arquivo;
+      move_uploaded_file($_FILES["imagem"]["tmp_name"], $arquivoNome);
+
 
         $sql = "UPDATE usuario SET nome='$nome', cep='$cep', logradouro='$logradouro', numero='$numero', cidade='$cidade', uf='$uf',complemento='$complemento',
-        bairro='$bairro', email='$email', senha=md5('$senha') , cpf='$cpf', telefone='$telefone' WHERE id = '$id'"; 
+        bairro='$bairro', email='$email', senha=md5('$senha') , cpf='$cpf', telefone='$telefone', imagem='$arquivoNome' WHERE id = '$id'"; 
         
         $resultado = mysqli_query($conn,$sql);
 
