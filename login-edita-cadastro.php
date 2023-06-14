@@ -73,7 +73,7 @@ if (isset($user_id)) {
                                     <div class="col-md-6">
                                           <div class="col-md-12 m-3">
                                                 <h2 class="mt-5 ml-2" style="font-size: 40px;">Olá <?php echo $row['nome'] ?></h2>
-                                                <form method="POST" action="login-edita-grava.php" name="login-edita-grava" id="login-edita-grava">
+                                                <form method="POST" enctype="multipart/form-data" action="login-edita-grava.php" name="login-edita-grava" id="login-edita-grava">
                                                       <div class="form-group">
                                                             <input type="hidden" id="id" name="id" value="<?php echo $row['id']; ?>">
                                                             <input class="form-control m-2 col-12" type="text" id="nome" name="nome" placeholder="Nome: " value="<?php echo $row['nome']; ?>">
@@ -98,7 +98,7 @@ if (isset($user_id)) {
                                     </div>
                                     <div class="col-md-6" style="margin-top: 100px;">
                                           <div class="col-md-12 m-3">
-                                                <img id="img" src="imagens/logo_red.png" width="100%" height="70%">
+                                                <img id="img" src="<?php echo $row['imagem']; ?>" width="100%" height="70%">
                                           </div>
                                     </div>
 
